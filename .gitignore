@@ -1,0 +1,5 @@
+# Secret file ko ignore karein
+.env
+
+# Python cache ko ignore karein
+__pycache__/

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieSuggest - Find Your Next Movie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 MovieSuggest</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for a movie...">
+                <button id="searchButton">Search</button>
+            </div>
+            <div class="header-buttons">
+                <button id="home-button" class="active">Home</button>
+                <button id="watchlist-button">My Wishlist</button>
+            </div>
+        </header>
+        <main id="mainContent">
+            <div id="view-container">
+                <div id="details-view" class="hidden">
+                    <div id="movie-details-content"></div> 
+                    <div id="recommendations-container" class="movie-grid-container"></div>
+                </div>
+                <div id="grid-view">
+                    <div id="grid-title"></div>
+                    <div id="movie-grid" class="movie-grid"></div>
+                </div>
+            </div>
+            <div id="loader" class="loader hidden"></div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
