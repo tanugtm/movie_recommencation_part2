@@ -78,11 +78,9 @@ def get_popular_movies():
     endpoint = "/movie/popular"
     params = {"api_key": TMDB_API_KEY}
     response = requests.get(TMDB_BASE_URL + endpoint, params=params)
-    
     if response.status_code == 200:
         return jsonify({"results": process_movies_list(response.json().get("results", []))})
     return jsonify({"error": "Failed to fetch popular movies"}), response.status_code
-
 
 # --- MAIN EXECUTION BLOCK (ngrok hata diya gaya hai) ---
 if __name__ == '__main__':
